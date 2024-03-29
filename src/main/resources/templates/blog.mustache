@@ -1,0 +1,11 @@
+{{> header}}
+
+<h1>{{title}}</h1>
+
+<div class="articles">
+  {{#articles}}
+    <h2>{{title}}</h2>
+    <h2>{{author.login}}</h2>
+  {{/articles}}
+ </div>
+{{> footer}}
