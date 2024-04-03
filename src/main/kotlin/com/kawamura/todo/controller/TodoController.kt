@@ -21,8 +21,8 @@ class TodoController(private val todoService: TodoService) {
     fun registTodo(model: Model): String {
         val newTodo = todoService.createTodo("first-title", "first-description")
         model["newtodo"] = newTodo
-        model["title"] = newTodo.title
-        model["description"] = newTodo.description
+//        model["title"] = newTodo.title
+//        model["description"] = newTodo.description
         return "todo_form"
     }
 }
