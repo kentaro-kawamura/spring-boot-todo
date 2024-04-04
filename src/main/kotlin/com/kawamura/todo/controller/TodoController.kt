@@ -29,14 +29,12 @@ class TodoController(private val todoService: TodoService) {
 
     @GetMapping("/create")
     fun showForm(model: Model): String {
-//        model["todoTest"] = Todo()
         return "todo_form"
     }
 
     @PostMapping("/create")
-    fun registTodo(@ModelAttribute todoTest: Todo, model: Model): String {
-        //val newTodo = todoService.createTodo("first-title", "first-description")
-        val newTodo = todoService.createTodo(todoTest)
+    fun registTodo(@ModelAttribute todo: Todo, model: Model): String {
+        val newTodo = todoService.createTodo(todo)
         model["newTodo"] = newTodo
         return "todo_page"
     }
