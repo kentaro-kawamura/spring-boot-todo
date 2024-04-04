@@ -16,9 +16,7 @@ class TodoService(private val todoRepository: TodoRepository) {
         return todoRepository.getReferenceById(id)
     }
 
-    fun createTodo(title: String,description: String): Todo {
-        val todo = Todo(title = title, description = description)
-        todoRepository.save(todo)
-        return todo
+    fun createTodo(todo: Todo): Todo {
+        return todoRepository.save(todo)
     }
 }

@@ -7,9 +7,9 @@ import java.time.LocalDateTime
 
 @Entity
 data class Todo(
-    var title: String,
+    var title: String? = null,
     var status: String = "todo",
-    var description: String,
+    var description: String? = null,
     var addedAt: LocalDateTime = LocalDateTime.now(),
     @Id @GeneratedValue var id: Long? = null
 )
